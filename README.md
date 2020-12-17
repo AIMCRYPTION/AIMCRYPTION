@@ -47,7 +47,7 @@
 
 <h1 align="center">
   <br>
-  <a href="https://github.com/aimcryption/aimcryption"><img src="./build/icons/256x256.png" alt="aim" width="180" style= "margin-bottom: 1rem"></a>
+  <a href="https://github.com/aimcryption/aimcryption"><img src="https://avatars1.githubusercontent.com/u/73211959?s=460&u=6801e5f74b6e971a4ac6df9d56a304b78398a6f3&v=4" alt="aim" width="180" style= "margin-bottom: 1rem"></a>
   <br>
   AIMCRYPTION
   <br>
