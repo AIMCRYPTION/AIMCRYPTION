@@ -55,7 +55,7 @@
 <h4 align="center">An Innovative, Convenient and Secure Cryptographic File System.</h4>
 <p align="center">
     <a href="https://github.com/Aimcryption/Aimcryption/releases/latest">
-        <img src=""
+        <img src="https://img.shields.io/badge/Download-5.0-orange.svg"
             alt="Download latest Release" style= "margin-bottom: 0.5rem" height="25px">
     </a>
 </p>
