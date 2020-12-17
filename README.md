@@ -40,3 +40,77 @@
 <br/>
 
 #### Links will be updated in near future
+
+<br/>
+
+<h1 align="center">
+  <br>
+  <a href="https://github.com/aimcryption/aimcryption"><img src="./build/icons/256x256.png" alt="aim" width="180" style= "margin-bottom: 1rem"></a>
+  <br>
+  AIMCRYPTION
+  <br>
+  <br>
+</h1>
+
+<h4 align="center">An Innovative, Convenient and Secure Cryptographic File System.</h4>
+<p align="center">
+    <a href="https://github.com/aimcryption/aimcryption/releases/latest">
+        <img src=""
+            alt="Download latest release" style= "margin-bottom: 0.5rem" height="25px">
+    </a>
+</p>
+
+<br>
+
+> Encrypt Unlimited Bits. Remember Only A Bit
+
+**AIMCRYPTION** is a cryptographic file system for windows that makes encryption and decryption
+convenient while still upholding strong security. It tackles one of the weakest
+links in most security systems today which weak passwords. It simplifies secure
+password generation and management and requires you to only remember one bit which is
+your MasterPass.
+
+Please open an issue if you have any suggestions and add improvements
+
+# Contents
+
+<!-- TOC depthFrom:2 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+
+- [Installation](#installation)
+- [Screens](#screens)
+- [Crypto](#crypto)
+  - [Encryption process](#encryption-process)
+  - [Decryption process](#decryption-process)
+  - [Public credentials](#public-credentials)
+- [CRYPTO file](#crypto-file)
+  - [Format](#format)
+  - [Reusing the same MasterPass](#reusing-the-same-masterpass)
+  - [Achieving portability and same MasterPass reuse](#achieving-portability-and-same-masterpass-reuse)
+- [Security](#security)
+  - [Security-first practice](#security-first-practice)
+  - [MasterPass](#masterpass)
+  - [MasterPassKey](#masterpasskey)
+- [FAQs](#faqs)
+  - [How do I encrypt a file or folder?](#how-do-i-encrypt-a-file-or-folder)
+  - [How do I decrypt a CRYPTO file?](#how-do-i-decrypt-a-crypto-file)
+  - [How do I encrypt multiple files?](#how-do-i-encrypt-multiple-files)
+  - [Why am I getting the "Corrupted Crypter file or trying to decrypt on a different machine." error?](#why-am-i-getting-the-corrupted-crypter-file-or-trying-to-decrypt-on-a-different-machine-error)
+  - [Why can't I decrypt a CRYPTO file on a different machine with the same MasterPass?](#why-cant-i-decrypt-a-crypto-file-on-a-different-machine-with-the-same-masterpass)
+  - [Why can't I decrypt a CRYPTO file with the same MasterPass?](#why-cant-i-decrypt-a-crypto-file-with-the-same-masterpass)
+  - [Where are my encrypted/decrypted files/folders placed?](#where-are-my-encrypteddecrypted-filesfolders-placed)
+  - [How can I access Aimcryption's preferences?](#how-can-i-access-crypters-preferences)
+  - [How can I reset my MasterPass?](#how-can-i-reset-my-masterpass)
+  - [What is a valid MasterPass?](#what-is-a-valid-masterpass)
+  - [What are MasterPass credentials?](#what-are-masterpass-credentials)
+  - [How can I export my MasterPass credentials?](#how-can-i-export-my-masterpass-credentials)
+  - [How can I import my MasterPass credentials?](#how-can-i-import-my-masterpass-credentials)
+- [Development](#development)
+  - [Configurations](#configurations)
+  - [Install (dependencies)](#install-dependencies)
+  - [Run](#run)
+  - [Test](#test)
+  - [Build](#build)
+- [License](#license)
+
+## <!-- /TOC -->
+
