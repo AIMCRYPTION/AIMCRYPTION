@@ -1,0 +1,323 @@
+// out: ./setup.css, compress: true
+/* Setup styles
+	 ==========================================================================
+*/
+@import (less) "mixins.less";
+/* Variable declarations*/
+@border-width: 2px;
+@side-margin: 0.8rem;
+@section-width: 60%;
+@spacing04: 0.4rem;
+@spacing-ic-txt: @side-margin - 0.4rem;
+/* TODO: ADD MARGIN RELATIVELY/CONTEXTUALLY TO CORE ELEMENTS I.E. for a button, use panel-container > button*/
+/* Animations */
+@keyframes colorTrans {
+  from {
+    background-color: @white;
+  }
+  to {
+    background-color: @light;
+  }
+}
+@-webkit-keyframes OrangeAnimGrad {
+  0% {
+    background-position: 0 51%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 51%;
+  }
+}
+@keyframes OrangeAnimGrad {
+  0% {
+    background-position: 0 51%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 51%;
+  }
+}
+/* General styles */
+#setup {
+  height    : 100%;
+  width     : 100%;
+  text-align: center;
+  overflow  : hidden;
+}
+form {
+  margin: 0;
+}
+header {
+  margin: 0;
+  p {
+    color: @blacker;
+  }
+  .minimal {
+    h1 {
+      margin-top : 1rem;
+      font-weight: 300;
+    }
+  }
+}
+h1 {
+  font-size    : 1.4rem;
+  margin-bottom: 0.4rem;
+  font-weight  : 400;
+}
+p {
+  margin: 0;
+  color : @dark;
+}
+h1 + p {
+  margin: 0 2rem;
+}
+.panel-container {
+  position: relative;
+  & > div {
+    position  : absolute;
+    text-align: center;
+    transform : translateX(-110%);
+    transition: transform 0.5s;
+    & > button {
+      display: none;
+    }
+  }
+  & > div.current {
+		width : 100%;
+		height: 100vh;
+    overflow : hidden;
+    transform: none;
+    position : relative;
+    & > button {
+      margin-top: 1rem;
+      display: inline-block;
+    }
+  }
+  & > div.current ~ div {
+    transform: translateX(110%);
+  }
+  header {
+    padding-top: 2rem;
+  }
+}
+
+// .panel-container > div {
+// 	position: absolute;
+// 	text-align: center;
+// 	transform: translateX(-110%);
+// 	transition: transform 0.5s;
+// }
+// .panel-container > div > footer {
+// 	transform: translateX(-110%);
+// }
+//
+// .panel-container > div.current > footer {
+// 	transform: translateX(100%);
+// }
+/* TODO DISABLE ANIMATION ON FIRST PANE */
+// #panel-welcome ~ div {
+// 	transform: none;
+// }
+// #panel-welcome > div {
+// 	transform: none;
+// 	transition: none;
+// }
+.right {
+  margin-left: auto !important;
+}
+h3 {
+  margin     : 0.5rem 0;
+  font-weight: normal;
+}
+a.csp {
+  padding: 0.6rem 0 !important;
+  img {
+    height: 1.6rem;
+    widht : auto;
+  }
+}
+footer {
+  display         : flex;
+  clear           : both;
+  position        : absolute;
+  border-top      : 1px solid @light;
+  width           : 100%;
+  padding-bottom  : 0;
+  background-color: @white;
+  bottom          : 0;
+  left            : 0;
+}
+footer > a {
+  float  : right;
+  padding: 0.2rem;
+}
+.himg {
+  width  : 9rem;
+  height : auto;
+  z-index: 1000;
+}
+div.list {
+  width   : 100%;
+  overflow: auto;
+}
+div.item > a {
+  display      : flex;
+  align-items  : center;
+  border-bottom: 1px solid @light;
+  padding      : @spacing04 0;
+  text-align   : left;
+}
+img.info {
+  float : right;
+  height: 0.9rem;
+}
+p.info {
+  display         : block;
+  width           : 100%;
+  box-sizing      : border-box;
+  max-height      : 0;
+  overflow        : hidden;
+  padding         : 0 0.5rem;
+  transition      : max-height 0.3s, padding 0.3s;
+  background-color: #efefef;
+  font-size       : 0.8rem;
+}
+input {
+  width: 98%;
+}
+input[type=password] {
+  margin-top   : 1rem;
+  border       : none;
+  border-bottom: 1px solid @light;
+  outline      : none;
+  &:focus {
+    border-bottom: 1px solid @black;
+  }
+}
+input[type=submit] {
+  margin-top      : 1rem;
+  height          : 2rem;
+  font-weight     : normal;
+  background-color: @light;
+  border          : 1px solid @light;
+  width           : 100%;
+  outline         : none;
+  &:focus {
+    border: 1px solid @black;
+  }
+}
+div.submit {
+  text-align      : right;
+  background-color: @white;
+  width           : 100%;
+}
+.none {
+  display: none;
+}
+
+/* Panel styles
+* =================
+*/
+.banner {
+  margin         : 1rem auto 0;
+  position       : relative;
+  align-items    : center;
+  justify-content: center;
+  width          : 100%;
+}
+.banner-left {
+  margin-left: -3rem;
+  float      : left;
+}
+.banner-right {
+  margin-right: -3rem;
+  float       : right;
+}
+/* Welcome Panel styles
+* =================
+*/
+#panel-welcome {
+  .marquee {
+    overflow: hidden;
+    position: relative;
+  }
+  .marquee-1 {
+    visibility: hidden;
+  }
+  .marquee-2 {
+    visibility: hidden;
+  }
+  .marquee.visible {
+    visibility: visible;
+  }
+  & > header {
+    .banner {
+      margin  : 2rem auto 0;
+      position: relative;
+      display : inline-block;
+      width   : 50%;
+      z-index : -1;
+      color   : @light;
+    }
+    .banner + .himg {
+      margin-top: -7.5rem !important;
+    }
+    .himg {
+      z-index: 1000;
+    }
+  }
+}
+/* Done Panel styles
+* =================
+*/
+#panel-done {
+  footer {
+    padding: 0.3rem 0;
+    text-align     : center;
+    display        : flex;
+    align-items    : center;
+    font-size      : 0.8rem;
+    justify-content: center;
+    img {
+      height: 1rem !important;
+    }
+  }
+}
+
+/* MasterPass Panel styles
+* =================
+*/
+#masterpassprompt {
+  height    : 100%;
+  min-height: 20rem;
+  width     : @section-width;
+  margin    : auto;
+}
+#setMasterPass {
+  margin     : 0.5rem 0;
+  font-weight: normal;
+  width      : 100%;
+}
+#masterpassprompt p.note {
+  margin   : none;
+  font-size: 0.8rem;
+}
+.forgotMP {
+  padding   : 0.2rem 0.2rem 0 0;
+  text-align: right;
+}
+
+/* INVALID STYLING */
+.masterpass > label {
+  display  : inline-block;
+  font-size: 0.8rem;
+  margin   : 0.2rem 0;
+  color    : @invalid-color;
+}
+.invalid {
+  border-color: @invalid-color !important;
+}

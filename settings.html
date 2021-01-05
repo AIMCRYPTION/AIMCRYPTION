@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles/settings.css" />
+    <script src="js/common.js" type="text/javascript"></script>
+    <script src="js/settings.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <section id="settings">
+        <div class="panel-container">
+            <div class="menu">
+                <a class="item right navigationLink active" data-tab="general">Preferences</a>
+                <a class="item navigationLink" data-tab="contribute">
+                    <img class="icon" src="images/icons/mark-github.svg" alt="" />
+                </a>
+            </div>
+            <div id="panel-general" class="current">
+                <section class="general">
+                    <header>
+                        <img class="header" src="images/icons/crypt.svg" alt="" />
+                        <h3>Preferences</h3>
+                    </header>
+                    <section class="category">
+                        <h4>Credentials</h4>
+                        <div class="options" id="creds">
+                            <div class="option">
+                                <button class="navigationLink" data-action="export">Export</button>
+                                <button class="navigationLink" data-action="import">Import</button>
+                            </div>
+                            <div class="option">
+                                <button class="navigationLink" data-action="app:reset-masterpass">Reset MasterPass</button>
+                            </div>
+                        </div>
+                        <p id="errLabel" class="info"></p>
+                    </section>
+                </section>
+            </div>
+            <div id="panel-contribute">
+                <section class="contribute">
+                    <header>
+                        <img class="header" src="images/icons/mark-github.svg" alt="" />
+                        <h3>Contribute</h3>
+                    </header>
+                    <div class="list">
+                        <div class="item">
+                            <a class="navigationLink" data-target="https://github.com/AIMCRYPTION/AIMCRYPTION/issues/new">
+                                <img src="images/icons/issue-opened.svg" class="icon" alt="" />
+                                <div class="name">
+                                    Report An Issue / Suggest Improvements
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a class="navigationLink" data-target="https://github.com/AIMCRYPTION/AIMCRYPTION">
+                                <img src="images/icons/star.svg" alt="" class="icon" />
+                                <div class="name">
+                                    Star The Repo
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a class="navigationLink" data-target="https://github.com/AIMCRYPTION/AIMCRYPTION/fork">
+                                <img src="images/icons/repo-forked.svg" alt="" class="icon" />
+                                <div class="name">
+                                    Fork The Repo
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a class="navigationLink" data-action="app:check-update">
+                                <img src="images/icons/package.svg" alt="" class="icon" />
+                                <div class="name">
+                                    Check For Updates
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <footer>
+                <img src="images/icons/code.svg" alt="" class="icon" /> WITH
+                <img src="images/icons/heart.svg" alt="" class="icon" /> BY
+                <a class="navigationLink" style="margin-left: 3px" data-target="https://github.com/AIMCRYPTION">AIM</a>
+            </footer>
+        </div>
+    </section>
+    <script id="creds-template" type="text/x-handlebars-template">
+        <div class='option'>
+            <span>
+          MasterPass Salt
+        </span>
+            <input class='right' type="password" readonly="readonly" value="{{mpsalt}}" />
+        </div>
+        <div class='option '>
+            <span>
+          MasterPassKey Hash
+        </span>
+            <input class='right ' type='password' readonly="readonly" value="{{mpkhash}}" />
+        </div>
+        <div class='option '>
+            <span>
+          MasterPassKey Salt
+        </span>
+            <input class='right ' type='password' readonly="readonly" value="{{mpksalt}}" />
+        </div>
+    </script>
+</body>
+
+</html>

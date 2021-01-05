@@ -1,0 +1,274 @@
+// out: ./settings.css, compress: true
+/* Settings styles
+	 ==========================================================================
+*/
+@import (less) "mixins.less";
+/* Variable declarations*/
+@list-height: 10rem;
+@border-width: 2px;
+@spacing04: 0.4rem;
+@ic-size: 1.4rem;
+@header-ic-size: 6rem;
+
+.panel-container {
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+
+  & > div:not(.menu) {
+    position: absolute;
+    text-align: center;
+    transform: translateX(-110%);
+    transition: transform 0.5s;
+
+    & > button {
+      margin-top: 1rem;
+    }
+  }
+
+  & > div.current {
+    width: 100%;
+    min-height: 100vh;
+    transform: none;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    section {
+      height: 90vh;
+    }
+  }
+
+  & > div.current ~ div {
+    transform: translateX(110%);
+  }
+}
+
+section#settings {
+  min-height: 100%;
+  position: relative;
+  background-color: @white;
+}
+
+p#errLabel {
+  text-align: center;
+}
+
+a:not(.navigationLink) {
+  font-size: 0.8rem;
+  color: @blacker;
+  text-decoration: none;
+  outline: none;
+}
+
+.left {
+  -webkit-align-self: flex-start;
+  align-self: flex-start;
+}
+
+.right {
+  margin-left: auto;
+}
+
+.menu {
+  display: flex;
+  margin-left: 0;
+  margin-right: 0;
+  align-self: flex-end;
+  transition: color 0.1s ease;
+
+  &:after {
+    content: '';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+
+  .item:after {
+    display: none;
+  }
+
+  .item {
+    position: relative;
+    cursor: pointer;
+    line-height: 1.4rem;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+    -webkit-user-select: none;
+    user-select: none;
+    padding: 0.7rem 0.8rem 0rem;
+    margin-right: 0.4rem;
+    text-transform: none;
+    color: rgba(0, 0, 0, 0.87);
+    transition: background 0.1s ease, box-shadow 0.1s ease, color 0.1s ease;
+  }
+
+  .active.item {
+    border-bottom: @border-width solid rgba(0, 0, 0, 0.8);
+    color: rgba(0, 0, 0, 0.95);
+    font-weight: normal;
+    box-shadow: none;
+  }
+}
+
+a.item:active {
+  border-bottom: @border-width solid rgba(0, 0, 0, 0.1);
+  margin-bottom: -@border-width;
+}
+
+.active.item {
+  background-color: transparent;
+  box-shadow: none;
+  border-color: @black;
+  font-weight: 700;
+  margin-bottom: -@border-width;
+  color: rgba(0,0,0,.95);
+}
+
+.item.right {
+  display: flex;
+  margin-left: auto !important;
+}
+
+img.icon {
+  width: @ic-size;
+  height: @ic-size;
+}
+img.header {
+  width: 6rem;
+  height: auto;
+  bottom: 0;
+}
+
+h3 {
+  margin: 0.5rem 0;
+  font-weight: normal;
+}
+
+h4 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 300;
+  text-align: left;
+  border-bottom: 1px solid @light;
+  padding-bottom: 5px;
+}
+
+header {
+  img.icon {
+    width: @header-ic-size;
+    height: @header-ic-size;
+  }
+}
+
+footer {
+  display: flex;
+  position: absolute;
+  border-top: 1px solid @light;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 0.3rem 0;
+  font-size: 0.8rem;
+  align-items: center;
+  justify-content: center;
+  background: @white;
+
+  & > img {
+    height: 1rem !important;
+  }
+}
+
+input[type=text] {
+  width: 15rem;
+}
+
+section.category {
+  text-align: left;
+  padding: 1rem;
+}
+
+div.options {
+  margin-left: 1rem;
+}
+
+div.option {
+  display: flex;
+  margin-top: 0.2rem;
+  font-size: 0.8rem;
+}
+
+div.list {
+  height: @list-height;
+  width: 100%;
+  overflow-y: auto;
+}
+
+div.item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid @light;
+  padding: @spacing04 0;
+  text-align: left;
+}
+/* Panel styles
+* =================
+*/
+section.general {
+  width: 90%;
+  margin: auto;
+  button {
+    margin: 0.4rem 0;
+  }
+  button:nth-child(1) {
+    margin-right: 0.4rem;
+  }
+}
+
+section.contribute {
+  width: 70%;
+  margin: auto;
+
+  header {
+    border-bottom: 1px solid @light;
+  }
+
+  div.list {
+    width: 100%;
+    margin-bottom: 3rem;
+    height: 100%;
+
+    .item {
+      a {
+        display: flex;
+        align-items: center;
+        text-align: left;
+      }
+
+      .name {
+        font-weight: 300;
+      }
+
+      .icon {
+        padding: 0.4rem;
+      }
+    }
+  }
+}
+
+section.crypto {
+  width: 90%;
+  margin: 1rem auto auto;
+
+  header > img {
+    height: 4rem !important;
+    width: auto;
+  }
+
+  button {
+    width: 20%;
+  }
+}

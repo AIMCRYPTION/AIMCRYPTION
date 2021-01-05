@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles/setup.css" charset="utf-8">
+    <script src="js/common.js" type="text/javascript"></script>
+    <script src="js/setup.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <section id="setup">
+        <div class="panel-container">
+            <div id="panel-welcome">
+                <header>
+                    <div class="banner banner-left">
+                        <div class="marquee marquee-1">
+                            Information Is The Resolution Of Uncertainty.&nbsp;
+                        </div>
+                        <div class="marquee marquee-1">
+                            Rather Be Without A State Than Without A Voice.&nbsp;
+                        </div>
+                        <div class="marquee marquee-1">
+                            Freedom Is Never Voluntarily Given By Oppressors.&nbsp;
+                        </div>
+                        <div class="marquee marquee-1">
+                            Everyone Has Secrets To ConceaL Privacy To Protect.&nbsp;
+                        </div>
+                        <div class="marquee marquee-1">
+                            Cryptograpy Is The Ultimate Form Of Non-Violent Direct Action.&nbsp;
+                        </div>
+                    </div>
+                    <div class="banner banner-right">
+                        <div class="marquee marquee-2">
+                            aNdtYE1jkAF8i8e6LgqAHNvS5J3Jc9H6XcUlM6YUIDi8rj3a0DLl
+                        </div>
+                        <div class="marquee marquee-2">
+                            zLAgN6Umn61buZC8I6D6+mjZQW2Ap0eXJYDmAi/uGKUQ5ezHI0GI
+                        </div>
+                        <div class="marquee marquee-2">
+                            3j6Nh1XO7WTRFa+1F3i38+TKvdhLt8kS8NAJkS5U670gElWDSffT
+                        </div>
+                        <div class="marquee marquee-2">
+                            yUuJBEfzkIv6t4dcGXSoX4nOh4KFjhrdIymLpnpOlw+7VGLxqWHl
+                        </div>
+                        <div class="marquee marquee-2">
+                            fG2w7C7LKU9eoB4hKjvWJ7EhXPBbzY/+/14VqjCG/O4Kqqr2sWGbV
+                        </div>
+                    </div>
+                    <img src="images/icons/Crypter.svg" alt="Crypter Logo" class="himg" />
+                    <h1>WELCOME TO AIMCRYPTION</h1>
+                    <p>Encrypt Unlimited Bits. Remember Only A Bit.</p>
+                    <p class="intrfo">An Innovative, Convenient & Secure Cryptography App That Simplifies Password Generation & Management By Requiring You To Only Remember One Bit, The MasterPass.</p>
+                </header>
+                <button class="fancy navigationLink" data-panel="masterpass" id="getstarted">GET STARTED</button>
+            </div>
+
+            <div id="panel-masterpass">
+                <section id="masterpassprompt">
+                    <header>
+                        <div class="banner">
+                            <img class="himg" src="images/icons/masterpass.svg" />
+                        </div>
+                        <h1>Set A MasterPass For Encryption</h1>
+                        <img class="info" src="images/icons/info.svg" alt="" />
+                        <p class="info">A MasterPassKey Will Be Derived From The MasterPass. This Will Then Be Used To Derive The Keys Used To Encrypt Your Data.</p>
+                    </header>
+                    <form onsubmit="return false;">
+                        <div class="masterpass">
+                            <input type="password" id="setMasterPassInput" placeholder="*************************************" />
+                            <label for="password" id="setMasterPassLabel"></label>
+                        </div>
+                        <button class="fancy" id="setMasterPass">SET</button>
+                    </form>
+                    <p class="note">
+                        NOTE: If Lost, The MasterPass Will Be Unverifiable! So,Please Store It Safely.
+                    </p>
+                </section>
+            </div>
+
+            <div id="panel-done">
+                <header>
+                    <div class="banner">
+                        <img src="images/icons/done.svg" class="himg" />
+                    </div>
+                    <h1>All Done!</h1>
+                    <p>You Are Set To Go!.
+                        <br/> You Just Need To Verify Your MasterPass To Start Encrypting Shortly.</p>
+                </header>
+                <button class="fancy done navigationLink" id="done">FINISH</button>
+
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

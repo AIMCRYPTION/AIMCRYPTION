@@ -1,0 +1,122 @@
+// out: ./masterpassprompt.css, compress: true
+/*
+	 MasterPassPrompt styles
+	 ==========================================================================
+*/
+@import (less) "mixins.less";
+
+/* Variable declarations*/
+@invalid-color: #9F3A38;
+
+/* Section styles */
+header {
+  margin: 0;
+}
+header > p {
+  color: @blacker;
+}
+h1 {
+  font-size    : 1.4rem;
+  margin-bottom: 0.1rem;
+}
+
+button#setMasterPass {
+  margin-top: 0.6rem;
+  margin-bottom: 0.4rem;
+  display: block !important;
+}
+button#checkMasterPass {
+  margin-top: 2rem;
+  display: block !important;
+}
+#masterpassprompt {
+  margin: 2rem 0 0 0;
+  height          : 100%;
+  width           : 100%;
+  background-color: @white;
+  text-align      : center;
+  overflow        : hidden;
+}
+.panel-container {
+  position: relative;
+}
+.panel-container > div {
+  display   : block;
+  position  : absolute;
+  text-align: center;
+  padding   : 0 3rem 3rem;
+  transform : translateX(-100%);
+  transition: transform 0.3s;
+}
+.panel-container > div.current ~ div {
+  transform: translateX(100%);
+}
+.panel-container > div.current {
+  transform: none;
+  position : relative;
+}
+p.info {
+  display         : block;
+  width           : 100%;
+  box-sizing      : border-box;
+  max-height      : 0;
+  overflow        : hidden;
+  padding         : 0 0.5rem;
+  transition      : max-height 0.3s, padding 0.3s;
+  background-color: #efefef;
+  font-size       : 0.8rem;
+}
+img.info {
+  float : right;
+  height: 0.9rem;
+}
+img.info:hover + p.info {
+  max-height    : 10rem;
+  padding-top   : 0.5rem;
+  padding-bottom: 0.5rem;
+}
+div.masterpass {
+  input {
+    width: 98%;
+  }
+  .navigationLink {
+    margin-top: 0.2rem;
+    float: right;
+  }
+}
+
+p.note {
+  margin-top: 0.2rem;
+  font-size: 0.8rem;
+}
+
+input[type=password] {
+  margin-top   : 1rem;
+  border       : none;
+  border-bottom: 1px solid @light;
+  outline      : none;
+  &:focus {
+    animation-name    : colorTrans;
+    animation-duration: 2s;
+    border-bottom     : 1px solid @black;
+  }
+}
+.invalid {
+  border-color: @invalid-color !important;
+}
+div.forgotMP {
+  padding   : 0.2rem 0.2rem 0 0;
+  text-align: right;
+}
+#checkMasterPass {
+  width: 100% !important;
+  margin-top      : 1rem;
+}
+
+/* INVALID STYLING */
+div.masterpass > label {
+  display  : inline-block;
+  font-size: 0.8rem;
+  margin   : 0.2rem 0;
+  color    : @invalid-color;
+}
