@@ -96,7 +96,7 @@ Please open an issue if you have any suggestions and add improvements
   - [How do I encrypt a file or folder?](#how-do-i-encrypt-a-file-or-folder)
   - [How do I decrypt a CRYPTO file?](#how-do-i-decrypt-a-crypto-file)
   - [How do I encrypt multiple files?](#how-do-i-encrypt-multiple-files)
-  - [Why am I getting the "Corrupted Crypter file or trying to decrypt on a different machine." error?](#why-am-i-getting-the-corrupted-crypter-file-or-trying-to-decrypt-on-a-different-machine-error)
+  - [Why am I getting the "Corrupted AIM file or trying to decrypt on a different machine." error?](#why-am-i-getting-the-corrupted-crypter-file-or-trying-to-decrypt-on-a-different-machine-error)
   - [Why can't I decrypt a CRYPTO file on a different machine with the same MasterPass?](#why-cant-i-decrypt-a-crypto-file-on-a-different-machine-with-the-same-masterpass)
   - [Why can't I decrypt a CRYPTO file with the same MasterPass?](#why-cant-i-decrypt-a-crypto-file-with-the-same-masterpass)
   - [Where are my encrypted/decrypted files/folders placed?](#where-are-my-encrypteddecrypted-filesfolders-placed)
